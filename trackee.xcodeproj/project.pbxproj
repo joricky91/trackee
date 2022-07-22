@@ -13,6 +13,11 @@
 		51B9FAF028891D53001153EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B9FAEF28891D53001153EF /* Preview Assets.xcassets */; };
 		51B9FAF228891D53001153EF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FAF128891D53001153EF /* Persistence.swift */; };
 		51B9FAF528891D53001153EF /* trackee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FAF328891D53001153EF /* trackee.xcdatamodeld */; };
+		51B9FB00288A3740001153EF /* InputNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FAFF288A3740001153EF /* InputNameView.swift */; };
+		51B9FB02288A39B2001153EF /* SizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB01288A39B2001153EF /* SizeHelper.swift */; };
+		51B9FB07288A56D8001153EF /* TextDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB06288A56D8001153EF /* TextDescription.swift */; };
+		51B9FB09288A57C2001153EF /* OnboardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB08288A57C2001153EF /* OnboardImage.swift */; };
+		51B9FB0B288A5981001153EF /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB0A288A5981001153EF /* LogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		51B9FAEF28891D53001153EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		51B9FAF128891D53001153EF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		51B9FAF428891D53001153EF /* trackee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = trackee.xcdatamodel; sourceTree = "<group>"; };
+		51B9FAFF288A3740001153EF /* InputNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputNameView.swift; sourceTree = "<group>"; };
+		51B9FB01288A39B2001153EF /* SizeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeHelper.swift; sourceTree = "<group>"; };
+		51B9FB06288A56D8001153EF /* TextDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDescription.swift; sourceTree = "<group>"; };
+		51B9FB08288A57C2001153EF /* OnboardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardImage.swift; sourceTree = "<group>"; };
+		51B9FB0A288A5981001153EF /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +65,9 @@
 		51B9FAE728891D52001153EF /* trackee */ = {
 			isa = PBXGroup;
 			children = (
+				51B9FAFB288A36AC001153EF /* Model */,
+				51B9FAFC288A36B2001153EF /* View */,
+				51B9FAFD288A36C8001153EF /* ViewModel */,
 				51B9FAE828891D52001153EF /* trackeeApp.swift */,
 				51B9FAEA28891D52001153EF /* ContentView.swift */,
 				51B9FAEC28891D53001153EF /* Assets.xcassets */,
@@ -71,6 +84,48 @@
 				51B9FAEF28891D53001153EF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		51B9FAFB288A36AC001153EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		51B9FAFC288A36B2001153EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				51B9FAFE288A3724001153EF /* Name View */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		51B9FAFD288A36C8001153EF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		51B9FAFE288A3724001153EF /* Name View */ = {
+			isa = PBXGroup;
+			children = (
+				51B9FB05288A4C6A001153EF /* Helper */,
+				51B9FAFF288A3740001153EF /* InputNameView.swift */,
+				51B9FB06288A56D8001153EF /* TextDescription.swift */,
+				51B9FB08288A57C2001153EF /* OnboardImage.swift */,
+				51B9FB0A288A5981001153EF /* LogoView.swift */,
+			);
+			path = "Name View";
+			sourceTree = "<group>";
+		};
+		51B9FB05288A4C6A001153EF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				51B9FB01288A39B2001153EF /* SizeHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +199,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				51B9FAF228891D53001153EF /* Persistence.swift in Sources */,
+				51B9FB0B288A5981001153EF /* LogoView.swift in Sources */,
+				51B9FB07288A56D8001153EF /* TextDescription.swift in Sources */,
+				51B9FB09288A57C2001153EF /* OnboardImage.swift in Sources */,
 				51B9FAEB28891D52001153EF /* ContentView.swift in Sources */,
+				51B9FB00288A3740001153EF /* InputNameView.swift in Sources */,
 				51B9FAE928891D52001153EF /* trackeeApp.swift in Sources */,
+				51B9FB02288A39B2001153EF /* SizeHelper.swift in Sources */,
 				51B9FAF528891D53001153EF /* trackee.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
