@@ -21,6 +21,7 @@
 		51B9FB11288BAC61001153EF /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB10288BAC61001153EF /* DashboardView.swift */; };
 		51B9FB15288BB057001153EF /* CardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB14288BB057001153EF /* CardComponent.swift */; };
 		51B9FB17288BC0C4001153EF /* LearningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB16288BC0C4001153EF /* LearningModel.swift */; };
+		51B9FB1B288C017B001153EF /* DashboardHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB1A288C017B001153EF /* DashboardHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		51B9FB10288BAC61001153EF /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		51B9FB14288BB057001153EF /* CardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardComponent.swift; sourceTree = "<group>"; };
 		51B9FB16288BC0C4001153EF /* LearningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningModel.swift; sourceTree = "<group>"; };
+		51B9FB1A288C017B001153EF /* DashboardHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			children = (
 				51B9FB10288BAC61001153EF /* DashboardView.swift */,
 				51B9FB14288BB057001153EF /* CardComponent.swift */,
+				51B9FB1A288C017B001153EF /* DashboardHeader.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B9FB1B288C017B001153EF /* DashboardHeader.swift in Sources */,
 				51B9FAF228891D53001153EF /* Persistence.swift in Sources */,
 				51B9FB0B288A5981001153EF /* LogoView.swift in Sources */,
 				51B9FB07288A56D8001153EF /* TextDescription.swift in Sources */,

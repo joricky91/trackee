@@ -32,7 +32,7 @@ struct CardComponent: View {
                 .font(.title3)
                 .padding(.trailing)
         }
-        .frame(width: UIScreen.main.bounds.width * 0.923, height: UIScreen.main.bounds.width * 0.236)
+        .padding(.vertical, 25)
         .background(.white)
         .cornerRadius(15)
     }

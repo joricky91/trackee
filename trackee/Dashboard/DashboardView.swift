@@ -14,33 +14,28 @@ struct DashboardView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color("lightBlue")
+        
+        ZStack {
+            Color("lightBlue")
+                .ignoresSafeArea()
+            
+            VStack {
+                DashboardHeader()
                     .ignoresSafeArea()
                 
                 VStack {
                     ForEach(dummyArr) { data in
                         CardComponent(categ: data.category, title: data.title, dur: data.duration)
                             .padding(.top, 10)
+                            .padding(.horizontal)
                     }
                     
                     Spacer()
                 }
-                .padding(.top, 20)
-                
+                .padding(.top, -35)
             }
-            .navigationTitle("Your Learning")
-            .navigationBarItems(trailing: Image(systemName: "plus").foregroundColor(Color("lightBlue")))
         }
-        .onAppear {
-            let appearance = UINavigationBarAppearance()
-            appearance.backgroundColor = UIColor(Color("darkBlue"))
-
-            UINavigationBar.appearance().standardAppearance = appearance
-
-            UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        }
+        
         
     }
 }
