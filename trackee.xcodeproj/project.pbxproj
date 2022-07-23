@@ -18,6 +18,9 @@
 		51B9FB07288A56D8001153EF /* TextDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB06288A56D8001153EF /* TextDescription.swift */; };
 		51B9FB09288A57C2001153EF /* OnboardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB08288A57C2001153EF /* OnboardImage.swift */; };
 		51B9FB0B288A5981001153EF /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB0A288A5981001153EF /* LogoView.swift */; };
+		51B9FB11288BAC61001153EF /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB10288BAC61001153EF /* DashboardView.swift */; };
+		51B9FB15288BB057001153EF /* CardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB14288BB057001153EF /* CardComponent.swift */; };
+		51B9FB17288BC0C4001153EF /* LearningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB16288BC0C4001153EF /* LearningModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		51B9FB06288A56D8001153EF /* TextDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDescription.swift; sourceTree = "<group>"; };
 		51B9FB08288A57C2001153EF /* OnboardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardImage.swift; sourceTree = "<group>"; };
 		51B9FB0A288A5981001153EF /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		51B9FB10288BAC61001153EF /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		51B9FB14288BB057001153EF /* CardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardComponent.swift; sourceTree = "<group>"; };
+		51B9FB16288BC0C4001153EF /* LearningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +71,9 @@
 		51B9FAE728891D52001153EF /* trackee */ = {
 			isa = PBXGroup;
 			children = (
-				51B9FAFB288A36AC001153EF /* Model */,
-				51B9FAFC288A36B2001153EF /* View */,
-				51B9FAFD288A36C8001153EF /* ViewModel */,
+				51B9FB0D288BABF4001153EF /* Model */,
+				51B9FAFE288A3724001153EF /* Welcome View */,
+				51B9FB0E288BAC2F001153EF /* Dashboard */,
 				51B9FAE828891D52001153EF /* trackeeApp.swift */,
 				51B9FAEA28891D52001153EF /* ContentView.swift */,
 				51B9FAEC28891D53001153EF /* Assets.xcassets */,
@@ -86,38 +92,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		51B9FAFB288A36AC001153EF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		51B9FAFC288A36B2001153EF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				51B9FAFE288A3724001153EF /* Name View */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		51B9FAFD288A36C8001153EF /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		51B9FAFE288A3724001153EF /* Name View */ = {
+		51B9FAFE288A3724001153EF /* Welcome View */ = {
 			isa = PBXGroup;
 			children = (
 				51B9FB05288A4C6A001153EF /* Helper */,
-				51B9FAFF288A3740001153EF /* InputNameView.swift */,
-				51B9FB06288A56D8001153EF /* TextDescription.swift */,
-				51B9FB08288A57C2001153EF /* OnboardImage.swift */,
-				51B9FB0A288A5981001153EF /* LogoView.swift */,
+				51B9FB0C288BABCF001153EF /* View */,
 			);
-			path = "Name View";
+			path = "Welcome View";
 			sourceTree = "<group>";
 		};
 		51B9FB05288A4C6A001153EF /* Helper */ = {
@@ -126,6 +107,34 @@
 				51B9FB01288A39B2001153EF /* SizeHelper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		51B9FB0C288BABCF001153EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				51B9FB06288A56D8001153EF /* TextDescription.swift */,
+				51B9FB08288A57C2001153EF /* OnboardImage.swift */,
+				51B9FB0A288A5981001153EF /* LogoView.swift */,
+				51B9FAFF288A3740001153EF /* InputNameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		51B9FB0D288BABF4001153EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				51B9FB16288BC0C4001153EF /* LearningModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		51B9FB0E288BAC2F001153EF /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				51B9FB10288BAC61001153EF /* DashboardView.swift */,
+				51B9FB14288BB057001153EF /* CardComponent.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,7 +214,10 @@
 				51B9FAEB28891D52001153EF /* ContentView.swift in Sources */,
 				51B9FB00288A3740001153EF /* InputNameView.swift in Sources */,
 				51B9FAE928891D52001153EF /* trackeeApp.swift in Sources */,
+				51B9FB17288BC0C4001153EF /* LearningModel.swift in Sources */,
+				51B9FB11288BAC61001153EF /* DashboardView.swift in Sources */,
 				51B9FB02288A39B2001153EF /* SizeHelper.swift in Sources */,
+				51B9FB15288BB057001153EF /* CardComponent.swift in Sources */,
 				51B9FAF528891D53001153EF /* trackee.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
