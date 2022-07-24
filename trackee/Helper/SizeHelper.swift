@@ -20,4 +20,7 @@ struct SizeHelper {
     var buttonWidth = UIScreen.main.bounds.width * 0.911
     var buttonHeight = UIScreen.main.bounds.width * 0.108
     
+    var timerWidth = UIScreen.main.bounds.width / 4.33
+    var timerHeight = UIScreen.main.bounds.width / 4.33
+    
 }

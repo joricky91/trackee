@@ -14,26 +14,32 @@ struct DashboardView: View {
     ]
     
     var body: some View {
-        
-        ZStack {
-            Color("lightBlue")
-                .ignoresSafeArea()
-            
-            VStack {
-                DashboardHeader()
+        NavigationView {
+            ZStack {
+                Color("lightBlue")
                     .ignoresSafeArea()
                 
                 VStack {
-                    ForEach(dummyArr) { data in
-                        CardComponent(categ: data.category, title: data.title, dur: data.duration)
-                            .padding(.top, 10)
-                            .padding(.horizontal)
-                    }
+                    DashboardHeader()
+                        .ignoresSafeArea()
                     
-                    Spacer()
+                    VStack {
+                        ForEach(dummyArr) { data in
+                            NavigationLink(destination: LearningView()) {
+                                CardComponent(categ: data.category, title: data.title, dur: data.duration)
+                                    .padding(.top, 10)
+                                    .padding(.horizontal)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                        }
+                        
+                        Spacer()
+                    }
+                    .padding(.top, -35)
                 }
-                .padding(.top, -35)
             }
+            .navigationTitle("")
+            .navigationBarHidden(true)
         }
         
         
