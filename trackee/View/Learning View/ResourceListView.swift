@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ResourceListView: View {
-    var dummyResource: [ResourceModel] = [
-        ResourceModel(resource: "https://www.youtube.com/watch?v=BPQkpxtgalY&t=1420s"),
-        ResourceModel(resource: "https://stackoverflow.com/questions/61423915/core-data-in-swiftui")
-    ]
+    
+    var learn: Learning
+    @State var isPresented = false
+    @ObservedObject var vm: LearningViewModel
     
     var body: some View {
         List {
@@ -19,19 +19,26 @@ struct ResourceListView: View {
                 HStack {
                     Text("Resources")
                         .foregroundColor(Color("darkGray"))
-                        .font(.title3)
+//                        .font()
                         .fontWeight(.bold)
                     
                     Spacer()
                     
+                Button {
+                    isPresented = true
+                } label: {
                     Image(systemName: "plus")
                     .font(.body)
+                }
                 
             }){
-                ForEach(dummyResource, id: \.id) { data in
-                    Text(data.resource)
+                if let resources = learn.resource?.allObjects as? [Resource] {
+                    ForEach(resources) { data in
+                        Text(data.link ?? "")
+                    }
                 }
             }
+            .headerProminence(.increased)
             
         }
         .listStyle(DefaultListStyle())
@@ -39,11 +46,14 @@ struct ResourceListView: View {
             // Set the default to clear
             UITableView.appearance().backgroundColor = .clear
         }
+        .sheet(isPresented: $isPresented) {
+            NewResourceView(learning: learn, vm: vm, isPresented: $isPresented)
+        }
     }
 }
 
-struct ResourceListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ResourceListView()
-    }
-}
+//struct ResourceListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ResourceListView()
+//    }
+//}

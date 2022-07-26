@@ -8,28 +8,35 @@
 import SwiftUI
 
 struct LearningView: View {
+    var learning: Learning
+    @ObservedObject var vm: LearningViewModel
+    
     var body: some View {
         ZStack {
             Color("lightBlue")
                 .ignoresSafeArea()
             
             VStack {
-                LearningHeader()
+                LearningHeader(learn: learning)
                     .ignoresSafeArea()
                 
                 VStack {
-                    TimerView()
+                    TimerView(learn: learning)
                     
-                    ResourceListView()
+                    ResourceListView(learn: learning, vm: vm)
                 }
+                Spacer()
                 .padding(.top, -20)
             }
         }
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
+    
 }
 
-struct LearningView_Previews: PreviewProvider {
-    static var previews: some View {
-        LearningView()
-    }
-}
+//struct LearningView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LearningView()
+//    }
+//}

@@ -9,14 +9,22 @@ import SwiftUI
 
 struct DashboardHeader: View {
     let radius = CGFloat(15)
+    @State var isPresented = false
+    @ObservedObject var vm: LearningViewModel
     
     var body: some View {
         VStack {
             HStack {
                 Spacer()
                 
-                Image(systemName: "plus")
-                    .foregroundColor(Color("lightBlue"))
+                Button {
+                    isPresented = true
+                } label: {
+                    Image(systemName: "plus")
+                        .foregroundColor(Color("lightBlue"))
+                }
+
+                
             }
             .padding()
             .frame(width: UIScreen.main.bounds.width)
@@ -40,11 +48,14 @@ struct DashboardHeader: View {
         .padding(.top, radius)
         .cornerRadius(radius)
         .padding(.top, -radius)
+        .sheet(isPresented: $isPresented) {
+            NewLearningView(isPresented: $isPresented, vm: vm)
+        }
     }
 }
 
-struct DashboardHeader_Previews: PreviewProvider {
-    static var previews: some View {
-        DashboardHeader()
-    }
-}
+//struct DashboardHeader_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DashboardHeader()
+//    }
+//}

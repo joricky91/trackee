@@ -9,14 +9,16 @@ import SwiftUI
 
 struct LearningHeader: View {
     let radius = CGFloat(15)
+    var learn: Learning
+    @Environment(\.presentationMode) var presentation
     
     var body: some View {
         VStack {
             Spacer()
             
-            HStack {
+            HStack(alignment: .center) {
                 Button {
-                    
+                    self.presentation.wrappedValue.dismiss()
                 } label: {
                     HStack {
                         Image(systemName: "chevron.left")
@@ -28,7 +30,7 @@ struct LearningHeader: View {
                 
                 Spacer()
                 
-                Text("Core Data")
+                Text(learn.title ?? "")
                     .fontWeight(.semibold)
                     .foregroundColor(Color("lightBlue"))
                     .padding(.trailing, 50)
@@ -46,8 +48,8 @@ struct LearningHeader: View {
     }
 }
 
-struct LearningHeader_Previews: PreviewProvider {
-    static var previews: some View {
-        LearningHeader()
-    }
-}
+//struct LearningHeader_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LearningHeader()
+//    }
+//}

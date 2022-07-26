@@ -9,13 +9,14 @@ import SwiftUI
 
 struct TimerView: View {
     var size = SizeHelper()
+    var learn: Learning
     
     var body: some View {
         ZStack {
             Button {
                 
             } label: {
-                Text("01 : 00")
+                Text(learn.duration < 9 ? "0\(learn.duration) : 00" : "\(learn.duration) : 00")
                     .foregroundColor(Color("darkBlue"))
                     .fontWeight(.semibold)
             }
@@ -26,8 +27,8 @@ struct TimerView: View {
     }
 }
 
-struct TimerView_Previews: PreviewProvider {
-    static var previews: some View {
-        TimerView()
-    }
-}
+//struct TimerView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TimerView()
+//    }
+//}

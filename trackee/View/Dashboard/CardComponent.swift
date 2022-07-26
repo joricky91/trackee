@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct CardComponent: View {
-    @State var categ: String
-    @State var title: String
-    @State var dur: Int
+    var categ: String
+    var title: String
+    var dur: Int
     
     var body: some View {
         HStack {
-            Image(systemName: categ)
+            Image(systemName: categ == "Tech" ? "chevron.left.forwardslash.chevron.right" : categ == "Design" ? "scribble" : "creditcard")
                 .font(.title)
                 .padding(.leading)
             
@@ -23,7 +23,7 @@ struct CardComponent: View {
                     .font(.title2)
                     .fontWeight(.semibold)
                 
-                Text("\(dur) hour")
+                Text("\(dur) minutes")
             }
             
             Spacer()

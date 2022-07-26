@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G72" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="LearningEntity" representedClassName="LearningEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="domain" optional="YES" attributeType="String"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="resources" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Resource" inverseName="learning" inverseEntity="Resource"/>
+    </entity>
+    <entity name="Resource" representedClassName="Resource" syncable="YES" codeGenerationType="class">
+        <attribute name="link" optional="YES" attributeType="String"/>
+        <relationship name="learning" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LearningEntity" inverseName="resources" inverseEntity="LearningEntity"/>
+    </entity>
+    <elements>
+        <element name="LearningEntity" positionX="-54" positionY="-9" width="128" height="104"/>
+        <element name="Resource" positionX="-18" positionY="45" width="128" height="59"/>
+    </elements>
+</model>

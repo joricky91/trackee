@@ -12,8 +12,6 @@ struct LearningModel: Identifiable {
     var title: String
     var category: String
     var duration: Int
-    
-   
 }
 
 

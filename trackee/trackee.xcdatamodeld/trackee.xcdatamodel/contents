@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G72" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
+    <entity name="Learning" representedClassName="Learning" syncable="YES" codeGenerationType="class">
+        <attribute name="domain" optional="YES" attributeType="String"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="resource" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Resource" inverseName="learning" inverseEntity="Resource"/>
+    </entity>
+    <entity name="Resource" representedClassName="Resource" syncable="YES" codeGenerationType="class">
+        <attribute name="link" optional="YES" attributeType="String"/>
+        <relationship name="learning" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Learning" inverseName="resource" inverseEntity="Learning"/>
+    </entity>
     <elements>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="Learning" positionX="-63" positionY="-9" width="128" height="104"/>
+        <element name="Resource" positionX="-63" positionY="27" width="128" height="59"/>
     </elements>
 </model>

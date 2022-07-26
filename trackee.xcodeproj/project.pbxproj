@@ -12,6 +12,10 @@
 		51338921288CF7E300578DFF /* ResourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51338920288CF7E300578DFF /* ResourceModel.swift */; };
 		51338923288CFBD700578DFF /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51338922288CFBD700578DFF /* TimerView.swift */; };
 		51338925288D181800578DFF /* LearningHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51338924288D181800578DFF /* LearningHeader.swift */; };
+		51338928288E30A100578DFF /* NewResourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51338927288E30A100578DFF /* NewResourceView.swift */; };
+		5133892B288E32E700578DFF /* NewLearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5133892A288E32E700578DFF /* NewLearningView.swift */; };
+		5133892F288E3D9500578DFF /* LearningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5133892E288E3D9500578DFF /* LearningViewModel.swift */; };
+		519BC427288E95BB007A293E /* ResourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BC426288E95BB007A293E /* ResourceViewModel.swift */; };
 		51B9FAE928891D52001153EF /* trackeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FAE828891D52001153EF /* trackeeApp.swift */; };
 		51B9FAEB28891D52001153EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FAEA28891D52001153EF /* ContentView.swift */; };
 		51B9FAED28891D53001153EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B9FAEC28891D53001153EF /* Assets.xcassets */; };
@@ -35,6 +39,10 @@
 		51338920288CF7E300578DFF /* ResourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceModel.swift; sourceTree = "<group>"; };
 		51338922288CFBD700578DFF /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		51338924288D181800578DFF /* LearningHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningHeader.swift; sourceTree = "<group>"; };
+		51338927288E30A100578DFF /* NewResourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewResourceView.swift; sourceTree = "<group>"; };
+		5133892A288E32E700578DFF /* NewLearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLearningView.swift; sourceTree = "<group>"; };
+		5133892E288E3D9500578DFF /* LearningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningViewModel.swift; sourceTree = "<group>"; };
+		519BC426288E95BB007A293E /* ResourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceViewModel.swift; sourceTree = "<group>"; };
 		51B9FAE528891D52001153EF /* trackee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trackee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51B9FAE828891D52001153EF /* trackeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trackeeApp.swift; sourceTree = "<group>"; };
 		51B9FAEA28891D52001153EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,8 +79,44 @@
 				5133891E288CF7A200578DFF /* ResourceListView.swift */,
 				51338922288CFBD700578DFF /* TimerView.swift */,
 				51338924288D181800578DFF /* LearningHeader.swift */,
+				51338926288E308100578DFF /* New Resource */,
 			);
 			path = "Learning View";
+			sourceTree = "<group>";
+		};
+		51338926288E308100578DFF /* New Resource */ = {
+			isa = PBXGroup;
+			children = (
+				51338927288E30A100578DFF /* NewResourceView.swift */,
+			);
+			path = "New Resource";
+			sourceTree = "<group>";
+		};
+		51338929288E32D800578DFF /* New Learning */ = {
+			isa = PBXGroup;
+			children = (
+				5133892A288E32E700578DFF /* NewLearningView.swift */,
+			);
+			path = "New Learning";
+			sourceTree = "<group>";
+		};
+		5133892C288E3C8800578DFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				51B9FAFE288A3724001153EF /* Welcome View */,
+				51B9FB0E288BAC2F001153EF /* Dashboard */,
+				5133891B288CC90F00578DFF /* Learning View */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5133892D288E3D5B00578DFF /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				5133892E288E3D9500578DFF /* LearningViewModel.swift */,
+				519BC426288E95BB007A293E /* ResourceViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		51B9FADC28891D52001153EF = {
@@ -96,9 +140,8 @@
 			children = (
 				51B9FB05288A4C6A001153EF /* Helper */,
 				51B9FB0D288BABF4001153EF /* Model */,
-				51B9FAFE288A3724001153EF /* Welcome View */,
-				51B9FB0E288BAC2F001153EF /* Dashboard */,
-				5133891B288CC90F00578DFF /* Learning View */,
+				5133892C288E3C8800578DFF /* View */,
+				5133892D288E3D5B00578DFF /* View Model */,
 				51B9FAE828891D52001153EF /* trackeeApp.swift */,
 				51B9FAEA28891D52001153EF /* ContentView.swift */,
 				51B9FAEC28891D53001153EF /* Assets.xcassets */,
@@ -120,7 +163,10 @@
 		51B9FAFE288A3724001153EF /* Welcome View */ = {
 			isa = PBXGroup;
 			children = (
-				51B9FB0C288BABCF001153EF /* View */,
+				51B9FB06288A56D8001153EF /* TextDescription.swift */,
+				51B9FB08288A57C2001153EF /* OnboardImage.swift */,
+				51B9FB0A288A5981001153EF /* LogoView.swift */,
+				51B9FAFF288A3740001153EF /* InputNameView.swift */,
 			);
 			path = "Welcome View";
 			sourceTree = "<group>";
@@ -131,17 +177,6 @@
 				51B9FB01288A39B2001153EF /* SizeHelper.swift */,
 			);
 			path = Helper;
-			sourceTree = "<group>";
-		};
-		51B9FB0C288BABCF001153EF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				51B9FB06288A56D8001153EF /* TextDescription.swift */,
-				51B9FB08288A57C2001153EF /* OnboardImage.swift */,
-				51B9FB0A288A5981001153EF /* LogoView.swift */,
-				51B9FAFF288A3740001153EF /* InputNameView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		51B9FB0D288BABF4001153EF /* Model */ = {
@@ -159,6 +194,7 @@
 				51B9FB10288BAC61001153EF /* DashboardView.swift */,
 				51B9FB14288BB057001153EF /* CardComponent.swift */,
 				51B9FB1A288C017B001153EF /* DashboardHeader.swift */,
+				51338929288E32D800578DFF /* New Learning */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -236,19 +272,23 @@
 				51B9FB1B288C017B001153EF /* DashboardHeader.swift in Sources */,
 				51B9FAF228891D53001153EF /* Persistence.swift in Sources */,
 				51338925288D181800578DFF /* LearningHeader.swift in Sources */,
+				51338928288E30A100578DFF /* NewResourceView.swift in Sources */,
 				51B9FB0B288A5981001153EF /* LogoView.swift in Sources */,
 				51B9FB07288A56D8001153EF /* TextDescription.swift in Sources */,
 				51B9FB09288A57C2001153EF /* OnboardImage.swift in Sources */,
 				51B9FAEB28891D52001153EF /* ContentView.swift in Sources */,
 				51B9FB00288A3740001153EF /* InputNameView.swift in Sources */,
 				51338923288CFBD700578DFF /* TimerView.swift in Sources */,
+				519BC427288E95BB007A293E /* ResourceViewModel.swift in Sources */,
 				51338921288CF7E300578DFF /* ResourceModel.swift in Sources */,
 				5133891F288CF7A200578DFF /* ResourceListView.swift in Sources */,
 				51B9FAE928891D52001153EF /* trackeeApp.swift in Sources */,
 				51B9FB17288BC0C4001153EF /* LearningModel.swift in Sources */,
 				51B9FB11288BAC61001153EF /* DashboardView.swift in Sources */,
 				51B9FB02288A39B2001153EF /* SizeHelper.swift in Sources */,
+				5133892F288E3D9500578DFF /* LearningViewModel.swift in Sources */,
 				51B9FB15288BB057001153EF /* CardComponent.swift in Sources */,
+				5133892B288E32E700578DFF /* NewLearningView.swift in Sources */,
 				5133891D288CC92800578DFF /* LearningView.swift in Sources */,
 				51B9FAF528891D53001153EF /* trackee.xcdatamodeld in Sources */,
 			);
