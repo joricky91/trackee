@@ -15,14 +15,14 @@
 		51338928288E30A100578DFF /* NewResourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51338927288E30A100578DFF /* NewResourceView.swift */; };
 		5133892B288E32E700578DFF /* NewLearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5133892A288E32E700578DFF /* NewLearningView.swift */; };
 		5133892F288E3D9500578DFF /* LearningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5133892E288E3D9500578DFF /* LearningViewModel.swift */; };
-		519BC427288E95BB007A293E /* ResourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BC426288E95BB007A293E /* ResourceViewModel.swift */; };
+		51511FF328922B8500F2C0F0 /* EmptyLearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51511FF228922B8500F2C0F0 /* EmptyLearningView.swift */; };
 		51B9FAE928891D52001153EF /* trackeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FAE828891D52001153EF /* trackeeApp.swift */; };
 		51B9FAEB28891D52001153EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FAEA28891D52001153EF /* ContentView.swift */; };
 		51B9FAED28891D53001153EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B9FAEC28891D53001153EF /* Assets.xcassets */; };
 		51B9FAF028891D53001153EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B9FAEF28891D53001153EF /* Preview Assets.xcassets */; };
 		51B9FAF228891D53001153EF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FAF128891D53001153EF /* Persistence.swift */; };
 		51B9FAF528891D53001153EF /* trackee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FAF328891D53001153EF /* trackee.xcdatamodeld */; };
-		51B9FB00288A3740001153EF /* InputNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FAFF288A3740001153EF /* InputNameView.swift */; };
+		51B9FB00288A3740001153EF /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FAFF288A3740001153EF /* LaunchScreen.swift */; };
 		51B9FB02288A39B2001153EF /* SizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB01288A39B2001153EF /* SizeHelper.swift */; };
 		51B9FB07288A56D8001153EF /* TextDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB06288A56D8001153EF /* TextDescription.swift */; };
 		51B9FB09288A57C2001153EF /* OnboardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9FB08288A57C2001153EF /* OnboardImage.swift */; };
@@ -42,7 +42,7 @@
 		51338927288E30A100578DFF /* NewResourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewResourceView.swift; sourceTree = "<group>"; };
 		5133892A288E32E700578DFF /* NewLearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLearningView.swift; sourceTree = "<group>"; };
 		5133892E288E3D9500578DFF /* LearningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningViewModel.swift; sourceTree = "<group>"; };
-		519BC426288E95BB007A293E /* ResourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceViewModel.swift; sourceTree = "<group>"; };
+		51511FF228922B8500F2C0F0 /* EmptyLearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyLearningView.swift; sourceTree = "<group>"; };
 		51B9FAE528891D52001153EF /* trackee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trackee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51B9FAE828891D52001153EF /* trackeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trackeeApp.swift; sourceTree = "<group>"; };
 		51B9FAEA28891D52001153EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		51B9FAEF28891D53001153EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		51B9FAF128891D53001153EF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		51B9FAF428891D53001153EF /* trackee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = trackee.xcdatamodel; sourceTree = "<group>"; };
-		51B9FAFF288A3740001153EF /* InputNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputNameView.swift; sourceTree = "<group>"; };
+		51B9FAFF288A3740001153EF /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		51B9FB01288A39B2001153EF /* SizeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeHelper.swift; sourceTree = "<group>"; };
 		51B9FB06288A56D8001153EF /* TextDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDescription.swift; sourceTree = "<group>"; };
 		51B9FB08288A57C2001153EF /* OnboardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardImage.swift; sourceTree = "<group>"; };
@@ -114,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				5133892E288E3D9500578DFF /* LearningViewModel.swift */,
-				519BC426288E95BB007A293E /* ResourceViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -166,7 +165,7 @@
 				51B9FB06288A56D8001153EF /* TextDescription.swift */,
 				51B9FB08288A57C2001153EF /* OnboardImage.swift */,
 				51B9FB0A288A5981001153EF /* LogoView.swift */,
-				51B9FAFF288A3740001153EF /* InputNameView.swift */,
+				51B9FAFF288A3740001153EF /* LaunchScreen.swift */,
 			);
 			path = "Welcome View";
 			sourceTree = "<group>";
@@ -194,6 +193,7 @@
 				51B9FB10288BAC61001153EF /* DashboardView.swift */,
 				51B9FB14288BB057001153EF /* CardComponent.swift */,
 				51B9FB1A288C017B001153EF /* DashboardHeader.swift */,
+				51511FF228922B8500F2C0F0 /* EmptyLearningView.swift */,
 				51338929288E32D800578DFF /* New Learning */,
 			);
 			path = Dashboard;
@@ -277,9 +277,9 @@
 				51B9FB07288A56D8001153EF /* TextDescription.swift in Sources */,
 				51B9FB09288A57C2001153EF /* OnboardImage.swift in Sources */,
 				51B9FAEB28891D52001153EF /* ContentView.swift in Sources */,
-				51B9FB00288A3740001153EF /* InputNameView.swift in Sources */,
+				51B9FB00288A3740001153EF /* LaunchScreen.swift in Sources */,
 				51338923288CFBD700578DFF /* TimerView.swift in Sources */,
-				519BC427288E95BB007A293E /* ResourceViewModel.swift in Sources */,
+				51511FF328922B8500F2C0F0 /* EmptyLearningView.swift in Sources */,
 				51338921288CF7E300578DFF /* ResourceModel.swift in Sources */,
 				5133891F288CF7A200578DFF /* ResourceListView.swift in Sources */,
 				51B9FAE928891D52001153EF /* trackeeApp.swift in Sources */,
@@ -436,7 +436,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,7 +465,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

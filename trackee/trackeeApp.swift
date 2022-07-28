@@ -16,7 +16,7 @@ struct trackeeApp: App {
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
 //            NewLearningView()
-            DashboardView()
+            LaunchScreen()
         }
     }
 }

@@ -16,7 +16,7 @@ class LearningViewModel: ObservableObject {
     @Published var duration: Int = 0
     @Published var link: String = ""
     @Published var savedLearning: [Learning] = []
-    var selectedLearning: Learning?
+    @Published var selectedLearning: Learning?
     
     init() {
         container = PersistenceController.shared.container

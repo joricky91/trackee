@@ -14,6 +14,7 @@ struct NewLearningView: View {
     @Binding var isPresented: Bool
     @ObservedObject var vm: LearningViewModel
     var domainChoice = ["Tech", "Design", "Business"]
+    var durationRange = [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000]
     
     var body: some View {
         NavigationView {
@@ -37,10 +38,11 @@ struct NewLearningView: View {
                 
                 Section {
                     Picker("Pick a duration", selection: $vm.duration){
-                        ForEach(0..<60, id: \.self) { i in
+                        ForEach(0..<61, id: \.self) { i in
                             Text("\(i) min").tag(i)
                         }
                     }
+                    
                 } header: {
                     Text("Duration")
                 }
