@@ -13,7 +13,6 @@ class LearningViewModel: ObservableObject {
     let container: NSPersistentContainer
     @Published var title: String = ""
     @Published var domain: String = ""
-    @Published var duration: Int = 0
     @Published var link: String = ""
     @Published var savedLearning: [Learning] = []
     @Published var selectedLearning: Learning?
@@ -39,7 +38,6 @@ class LearningViewModel: ObservableObject {
         newLearning.id = UUID()
         newLearning.title = title
         newLearning.domain = domain
-        newLearning.duration = Int16(duration)
         
 //        newLearning.addToResource(<#T##value: Resource##Resource#>)
         

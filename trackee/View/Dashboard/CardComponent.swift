@@ -10,7 +10,6 @@ import SwiftUI
 struct CardComponent: View {
     var categ: String
     var title: String
-    var dur: Int
     
     var body: some View {
         HStack {
@@ -23,7 +22,7 @@ struct CardComponent: View {
                     .font(.title2)
                     .fontWeight(.semibold)
                 
-                Text("\(dur) minutes")
+                Text("20 minutes")
             }
             
             Spacer()

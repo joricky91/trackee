@@ -21,7 +21,7 @@ struct LearningView: View {
                     .ignoresSafeArea()
                 
                 VStack {
-                    TimerView(vm: vm)
+                    TimerView()
                     
                     ResourceListView(learn: learning, vm: vm)
                 }

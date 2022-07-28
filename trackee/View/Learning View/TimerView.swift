@@ -10,29 +10,25 @@ import SwiftUI
 struct TimerView: View {
     var size = SizeHelper()
     let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
-    @ObservedObject var vm: LearningViewModel
-//    var dateFormat: Date? {
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "mm:ss"
-//        return formatter.date(from: intString())
-//    }
-    @State var timerRunning = false
+//    @ObservedObject var vm: LearningViewModel
+    @State var countDown = 1200
+    @State var timerRunning = true
 
     var body: some View {
         ZStack {
             Button {
-                timerRunning = !timerRunning
+                
             } label: {
-                Text("\(vm.selectedLearning?.duration ?? 0)")
+                Text("\(countDown)")
                     .foregroundColor(Color("darkBlue"))
                     .fontWeight(.semibold)
-//                    .onReceive(timer) { _ in
-//                        if vm.selectedLearning?.duration ?? 0 > 0 && timerRunning {
-//                            vm.selectedLearning?.duration -= 1
-//                        } else {
-//                            timerRunning = false
-//                        }
-//                    }
+                    .onReceive(timer) { _ in
+                        if countDown > 0 && timerRunning {
+                            countDown -= 1
+                        } else {
+                            timerRunning = false
+                        }
+                    }
             }
             .frame(width: size.timerWidth, height: size.timerHeight)
             .background(Color("lightGreen"))
@@ -43,10 +39,7 @@ struct TimerView: View {
         }
         
     }
-    
-    func milliSeconds() -> Int16 {
-        return (vm.selectedLearning?.duration ?? 0) * 1000
-    }
+
 }
 
 //struct TimerView_Previews: PreviewProvider {

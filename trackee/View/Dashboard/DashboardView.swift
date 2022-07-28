@@ -30,7 +30,7 @@ struct DashboardView: View {
                                 .onAppear {
                                     vm.selectedLearning = data
                                 }) {
-                                    CardComponent(categ: data.domain ?? "", title: data.title ?? "", dur: Int(data.duration))
+                                    CardComponent(categ: data.domain ?? "", title: data.title ?? "")
                                         .padding(.top, 10)
                                         .padding(.horizontal)
                                 }

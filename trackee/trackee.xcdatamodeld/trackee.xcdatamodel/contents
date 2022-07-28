@@ -5,7 +5,6 @@
     </entity>
     <entity name="Learning" representedClassName="Learning" syncable="YES" codeGenerationType="class">
         <attribute name="domain" optional="YES" attributeType="String"/>
-        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="resource" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Resource" inverseName="learning" inverseEntity="Resource"/>
@@ -16,7 +15,7 @@
     </entity>
     <elements>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
-        <element name="Learning" positionX="-63" positionY="-9" width="128" height="104"/>
+        <element name="Learning" positionX="-63" positionY="-9" width="128" height="89"/>
         <element name="Resource" positionX="-63" positionY="27" width="128" height="59"/>
     </elements>
 </model>
