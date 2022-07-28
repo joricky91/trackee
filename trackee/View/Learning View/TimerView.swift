@@ -16,16 +16,23 @@ struct TimerView: View {
 //        formatter.dateFormat = "mm:ss"
 //        return formatter.date(from: intString())
 //    }
-    @State var timerRunning = true
+    @State var timerRunning = false
 
     var body: some View {
         ZStack {
             Button {
-                
+                timerRunning = !timerRunning
             } label: {
                 Text("\(vm.selectedLearning?.duration ?? 0)")
                     .foregroundColor(Color("darkBlue"))
                     .fontWeight(.semibold)
+//                    .onReceive(timer) { _ in
+//                        if vm.selectedLearning?.duration ?? 0 > 0 && timerRunning {
+//                            vm.selectedLearning?.duration -= 1
+//                        } else {
+//                            timerRunning = false
+//                        }
+//                    }
             }
             .frame(width: size.timerWidth, height: size.timerHeight)
             .background(Color("lightGreen"))
@@ -34,13 +41,7 @@ struct TimerView: View {
                 
             }
         }
-        .onReceive(timer) { _ in
-            if vm.selectedLearning?.duration ?? 0 > 0 && timerRunning {
-                vm.selectedLearning?.duration -= 1
-            } else {
-                timerRunning = false
-            }
-        }
+        
     }
     
     func milliSeconds() -> Int16 {
