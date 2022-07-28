@@ -23,4 +23,7 @@ struct SizeHelper {
     var timerWidth = UIScreen.main.bounds.width / 4.33
     var timerHeight = UIScreen.main.bounds.width / 4.33
     
+    var emptyLearningImageWidth = UIScreen.main.bounds.width / 1.70
+    var emptyLearningImageHeight = UIScreen.main.bounds.width / 1.922
+    
 }

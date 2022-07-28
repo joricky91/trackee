@@ -12,10 +12,6 @@ struct DashboardView: View {
     @StateObject var vm = LearningViewModel()
     
     var body: some View {
-//        NavigationView {
-//
-//
-//        }
         ZStack {
             Color("lightBlue")
                 .ignoresSafeArea()
@@ -24,27 +20,30 @@ struct DashboardView: View {
                 DashboardHeader(vm: vm)
                     .ignoresSafeArea()
                 
-                ScrollView {
-                    ForEach(vm.savedLearning) { data in
-                        NavigationLink(destination:
-                            LearningView(learning: data, vm: vm)
-                            .onAppear {
-                                vm.selectedLearning = data
-                            }) {
-                                CardComponent(categ: data.domain ?? "", title: data.title ?? "", dur: Int(data.duration))
-                                    .padding(.top, 10)
-                                    .padding(.horizontal)
-                            }
-                            .buttonStyle(PlainButtonStyle())
+                if vm.savedLearning.isEmpty {
+                    EmptyLearningView()
+                } else {
+                    ScrollView {
+                        ForEach(vm.savedLearning) { data in
+                            NavigationLink(destination:
+                                LearningView(learning: data, vm: vm)
+                                .onAppear {
+                                    vm.selectedLearning = data
+                                }) {
+                                    CardComponent(categ: data.domain ?? "", title: data.title ?? "", dur: Int(data.duration))
+                                        .padding(.top, 10)
+                                        .padding(.horizontal)
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                            
+                        }
                         
+                        
+                        Spacer()
                     }
-                    
-                    
-                    Spacer()
+                    .padding(.top, -35)
                 }
-                .navigationTitle("")
-                .navigationBarHidden(true)
-                .padding(.top, -35)
+                
             }
         }
         .navigationTitle("")

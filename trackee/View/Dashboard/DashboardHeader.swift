@@ -21,10 +21,8 @@ struct DashboardHeader: View {
                     isPresented = true
                 } label: {
                     Image(systemName: "plus")
-                        .foregroundColor(Color("lightBlue"))
+                        .foregroundColor(.white)
                 }
-
-                
             }
             .padding()
             .frame(width: UIScreen.main.bounds.width)
@@ -36,7 +34,7 @@ struct DashboardHeader: View {
                 Text("Your Learning")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .foregroundColor(Color("lightBlue"))
+                    .foregroundColor(.white)
                 
                 Spacer()
             }

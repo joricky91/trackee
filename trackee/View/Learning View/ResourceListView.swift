@@ -19,7 +19,6 @@ struct ResourceListView: View {
                 HStack {
                     Text("Resources")
                         .foregroundColor(Color("darkGray"))
-//                        .font()
                         .fontWeight(.bold)
                     
                     Spacer()

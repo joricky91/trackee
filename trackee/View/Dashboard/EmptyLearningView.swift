@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct EmptyLearningView: View {
+    var size = SizeHelper()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image("learning-empty")
+                .resizable()
+                .frame(width: size.emptyLearningImageWidth, height: size.emptyLearningImageHeight)
+                .padding(.bottom)
+            
+            Text("You don’t have any learnings yet!")
+                .foregroundColor(Color("darkGray"))
+                .fontWeight(.medium)
+        }
+        
+        Spacer()
     }
 }
 
