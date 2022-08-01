@@ -9,5 +9,6 @@ import Foundation
 
 struct ResourceModel: Identifiable {
     var id = UUID()
+    var name: String
     var resource: String
 }

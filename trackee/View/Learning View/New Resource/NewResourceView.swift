@@ -17,6 +17,13 @@ struct NewResourceView: View {
         NavigationView {
             Form {
                 Section {
+                    TextField("Insert resource name...", text: $vm.name)
+                        .background()
+                } header: {
+                    Text("Name")
+                }
+                
+                Section {
                     TextField("Insert resource link...", text: $vm.link)
                         .background()
                 } header: {

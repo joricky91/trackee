@@ -14,6 +14,7 @@ class LearningViewModel: ObservableObject {
     @Published var title: String = ""
     @Published var domain: String = ""
     @Published var link: String = ""
+    @Published var name: String = ""
     @Published var savedLearning: [Learning] = []
     @Published var selectedLearning: Learning?
     
@@ -47,6 +48,7 @@ class LearningViewModel: ObservableObject {
     func addResource() {
         let newResource = Resource(context: container.viewContext)
         newResource.link = link
+        newResource.name = name
         newResource.learning = selectedLearning
          
         saveData()
