@@ -16,6 +16,7 @@ struct CardComponent: View {
             Image(systemName: categ == "Tech" ? "chevron.left.forwardslash.chevron.right" : categ == "Design" ? "scribble" : "creditcard")
                 .font(.title)
                 .padding(.leading)
+                .foregroundColor(Color(categ == "Tech" ? "tech" : categ == "Design" ? "design" : "business"))
             
             VStack(alignment: .leading) {
                 Text(title)
