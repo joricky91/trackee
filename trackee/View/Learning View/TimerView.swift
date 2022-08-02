@@ -9,17 +9,23 @@ import SwiftUI
 
 struct TimerView: View {
     var size = SizeHelper()
+    @State var countDown = 1500
+    @State var timerRunning = false
     let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
-//    @ObservedObject var vm: LearningViewModel
-    @State var countDown = 1200
-    @State var timerRunning = true
+    
+    func secondsToTime(time: Int) -> String {
+        let minute = time / 60
+        let second = time % 60
+        
+        return String(format: "%02i:%02i", minute, second)
+    }
 
     var body: some View {
         ZStack {
             Button {
-                
+                timerRunning = true
             } label: {
-                Text("\(countDown)")
+                Text(secondsToTime(time: countDown))
                     .foregroundColor(Color("darkBlue"))
                     .fontWeight(.semibold)
                     .onReceive(timer) { _ in

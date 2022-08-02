@@ -23,7 +23,7 @@ struct CardComponent: View {
                     .font(.title2)
                     .fontWeight(.semibold)
                 
-                Text("20 minutes")
+                Text("25 minutes")
             }
             
             Spacer()
