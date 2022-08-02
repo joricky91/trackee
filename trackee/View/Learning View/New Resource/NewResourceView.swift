@@ -44,6 +44,14 @@ struct NewResourceView: View {
                     Text("Save")
                 })
             )
+            .navigationBarItems(leading:
+                Button(action: {
+                    isPresented = false
+                }, label: {
+                    Text("Cancel")
+                        .foregroundColor(.red)
+                })
+            )
         }
     }
 }

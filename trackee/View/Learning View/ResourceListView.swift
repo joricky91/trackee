@@ -33,8 +33,6 @@ struct ResourceListView: View {
             }){
                 if let resources = learn.resource?.allObjects as? [Resource] {
                     ForEach(resources) { data in
-//                        Text(data.link ?? "")
-//                        Text("[data.name](data.link)")
                         Link(data.name ?? "", destination: URL(string: data.link ?? "")!)
                     }
                 }

@@ -10,48 +10,53 @@ import SwiftUI
 struct LaunchScreen: View {
     var size = SizeHelper()
     @State var selection: Int? = nil
+    @ObservedObject var vm: LearningViewModel
     
     var body: some View {
         NavigationView {
-            ZStack {
-                Color("lightBlue")
-                    .ignoresSafeArea()
-                
-                VStack(alignment: .center) {
-                    Spacer()
+            if vm.savedLearning.isEmpty {
+                ZStack {
+                    Color("lightBlue")
+                        .ignoresSafeArea()
                     
-                    LogoView()
+                    VStack(alignment: .center) {
+                        Spacer()
                         
-                    Spacer()
-                    
-                    OnboardImage()
-                    
-                    Text("#TrackYourLearning")
-                        .fontWeight(.bold)
-                    
-                    TextDescription()
-                    
-                    Spacer()
-                    
-                    NavigationLink(destination: DashboardView(), tag: 1, selection: $selection) {
-                        Button {
-                            self.selection = 1
-                        } label: {
-                            Text("Start")
-                                .foregroundColor(Color("lightBlue"))
-                                .fontWeight(.semibold)
+                        LogoView()
+                            
+                        Spacer()
+                        
+                        OnboardImage()
+                        
+                        Text("#TrackYourLearning")
+                            .fontWeight(.bold)
+                        
+                        TextDescription()
+                        
+                        Spacer()
+                        
+                        NavigationLink(destination: DashboardView(), tag: 1, selection: $selection) {
+                            Button {
+                                self.selection = 1
+                            } label: {
+                                Text("Start")
+                                    .foregroundColor(Color("lightBlue"))
+                                    .fontWeight(.semibold)
+                            }
+                            .frame(width: size.buttonWidth, height: size.buttonHeight)
+                            .background(Color("darkBlue"))
+                        .cornerRadius(8)
                         }
-                        .frame(width: size.buttonWidth, height: size.buttonHeight)
-                        .background(Color("darkBlue"))
-                    .cornerRadius(8)
+                        
+                        Spacer()
                     }
                     
-                    Spacer()
                 }
-                
+                .navigationTitle("")
+                .navigationBarHidden(true)
+            } else {
+                DashboardView()
             }
-            .navigationTitle("")
-            .navigationBarHidden(true)
         }
     }
     
